@@ -3,6 +3,8 @@ import 'package:malaria_survillance_app/shared/components/button.dart';
 import 'package:malaria_survillance_app/shared/components/selector.dart';
 import 'package:malaria_survillance_app/shared/components/text_field.dart';
 import '../shared/components/organization_unit_tree.dart';
+import '../shared/widgets/geoMap.dart';
+import '../shared/widgets/map_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -22,10 +24,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // MapComponent(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.87,
+                child: CustomGeoMap(),
+              ),
               // TextFieldComponent(
               //   label: 'Name',
               //   hintText: 'Enter name',
