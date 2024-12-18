@@ -8,8 +8,8 @@ class MapComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.79,
-      child: GoogleMap(
-        initialCameraPosition: const CameraPosition(
+      child: const GoogleMap(
+        initialCameraPosition: CameraPosition(
           target: LatLng(-6.369028, 34.888822),
           zoom: 5.3,
         ),
